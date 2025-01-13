@@ -87,7 +87,7 @@ public:
             }
         }
 
-        data[Find(r * 50 + c)] = value;
+        data[r * 50 + c] = value;
     }
 
     string Print(int r, int c)
