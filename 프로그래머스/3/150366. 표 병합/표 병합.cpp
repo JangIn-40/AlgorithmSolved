@@ -37,42 +37,21 @@ public:
         if (data[pid].empty())
         {
             group[pid] = qid;
-            for (int i = 0; i < group.size(); ++i)
-            {
-                if (group[i] == qid)
-                {
-                    group[i] = pid;
-                }
-            }
         }
         else if (data[qid].empty())
         {
             group[qid] = pid;
-            for (int i = 0; i < group.size(); ++i)
-            {
-                if (group[i] == qid)
-                {
-                    group[i] = pid;
-                }
-            }
         }
         else
         {
             group[qid] = pid;
-            for (int i = 0; i < group.size(); ++i)
-            {
-                if (group[i] == qid)
-                {
-                    group[i] = pid;
-                }
-            }
         }
         
-        for (int i = 0; i < group.size(); ++i)
+        for(int i = 0; i < group.size(); ++i)
         {
-            if (group[i] == qid)
+            if(group[i] == pid || group[i] == qid)
             {
-                group[i] = pid;
+                Find(i);
             }
         }
     }
